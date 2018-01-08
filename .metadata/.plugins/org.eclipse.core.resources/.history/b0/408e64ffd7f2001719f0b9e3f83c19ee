@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class InsertionStr {
+	public static void insertion(String[] arr, int n) {
+		
+		for(int i=1;i<n;i++)
+		{
+			String key=arr[i];
+			int j=i-1;
+			while(j>=0 && key.compareTo(arr[j])<0)
+			{
+				arr[j+1]=arr[j];
+				j=j-1;
+			}
+			arr[j+1]=key;	
+			
+		}
+		System.out.println("Sorted array is: ");
+		for(int i=0;i<n;i++)
+		{
+			System.out.println(arr[i]+" ");
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int n=scan.nextInt();
+		String arr[]=new String[n];
+		System.out.println("Enter the elements");
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=scan.next();
+		}
+		Stopwatch sw=new Stopwatch();
+		sw.start();
+		insertion(arr,n);
+		sw.end();
+		sw.elapsedtime();
+	}
+
+	
+
+}

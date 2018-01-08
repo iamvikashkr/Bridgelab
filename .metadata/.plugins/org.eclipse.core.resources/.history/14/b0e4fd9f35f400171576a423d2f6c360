@@ -1,0 +1,31 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class WordList {
+
+	public static void main(String[] args) {
+		try {
+			Scanner scan=new Scanner(new File("/home/bridgeit/Desktop/work2.txt"));
+			Scanner s=new Scanner(System.in);
+			int i=0;
+			String words[]=new String[100];
+			while(scan.hasNext())
+			{
+			 words[i]=(String) scan.next();
+			}
+			for(int i=0;i<words.length;i++)
+			{
+				System.out.println(words[i]);
+			}
+		} 
+		
+		
+		catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

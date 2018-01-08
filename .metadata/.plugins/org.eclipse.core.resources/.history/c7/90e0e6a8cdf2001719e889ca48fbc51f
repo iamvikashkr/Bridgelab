@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Stopwatch {
+	long startime=0;
+	long endtime=0;
+	long elapsed=1;
+	public void start()
+	{
+		startime=System.currentTimeMillis();
+		System.out.println("Start time is: "+ startime);
+	}
+	
+	public void end()
+	{
+		 endtime=System.currentTimeMillis();
+		System.out.println("End time is: "+ endtime);
+	}
+	
+	public void elapsedtime()
+	{
+		 elapsed=endtime-startime;
+		System.out.println("Elapsed time is: "+elapsed);
+		System.out.println("Converting millisec to seconds: "+(elapsed/1000)+" sec");
+	}
+	
+	public static void main(String[] args) {
+
+		Stopwatch sw=new Stopwatch();
+		System.out.println("press any key to start");
+		Scanner scan=new Scanner(System.in);
+		int strt=scan.nextInt();
+		sw.start();
+		
+		System.out.println("press any key to stop stopwatch");
+		int stop=scan.nextInt();
+		sw.end();
+		
+		sw.elapsedtime();
+		
+		
+	}
+
+}

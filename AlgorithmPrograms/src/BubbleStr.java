@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class BubbleStr {
+	
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		Utility ut=new Utility(); 
+
+		System.out.println("Enter the size of array");
+		int n=scan.nextInt();
+		String arr[]=new String[n];
+		System.out.println("Enter the elements");
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=scan.next();
+		}
+		Stopwatch sw=new Stopwatch();
+		sw.start();
+		ut.bubble(arr,n);
+		sw.end();
+		sw.elapsedtime();
+	}
+
+}

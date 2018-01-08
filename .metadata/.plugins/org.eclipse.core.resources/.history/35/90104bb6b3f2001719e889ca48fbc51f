@@ -1,0 +1,21 @@
+
+public class Stopwatch {
+
+	public void start()
+	{
+		long startime=System.currentTimeMillis();
+		System.out.println("Start time is: "+ startime);
+	}
+	
+	public void end()
+	{
+		long endtime=System.currentTimeMillis();
+		System.out.println("End time is: "+ endtime);
+	}
+	
+	public static void main(String[] args) {
+
+		
+	}
+
+}

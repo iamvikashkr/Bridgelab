@@ -1,0 +1,58 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+
+public class Arrlistfile {
+	public static void search(ArrayList al, String key)
+	{			Scanner scan=new Scanner(System.in);
+
+		boolean found=false;
+		String curr=null;
+		Iterator itr=al.iterator();
+		while(itr.hasNext())
+		{
+			curr=(String) itr.next();
+			if(curr.equals(key))
+			{
+				found=true;
+				System.out.println("Word found!!!!!!");
+				return;
+			}
+		}
+		System.out.println("Word not found");
+		
+	}
+
+	public static void main(String[] args) {
+
+		try 
+		{	
+			Scanner scan=new Scanner(new File("/home/bridgeit/Desktop/work2.txt"));
+			Scanner s=new Scanner(System.in);
+			ArrayList<String> al =new ArrayList<String>();
+
+
+			while(scan.hasNext())
+			{
+				al.add(scan.next());	
+			}
+			//Collections.sort(al);
+			//System.out.println(al);
+			System.out.println("ENter the word to be Searched");
+			String key=s.nextLine();
+			//System.out.println(al.contains(key));
+			
+			
+			search(al,key);
+			
+			
+		} 
+
+		catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,28 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class BInaryString {
+	static public void binsearch(String arr[],int n)
+	{
+		Arrays.sort(arr);
+		for(int i=0;i<n;i++)
+		{
+			System.out.println(arr[i]+" ");		
+		}
+	}
+	public static void main(String[] args) {
+
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int n=scan.nextInt();
+		String arr[]=new String[n];
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=scan.nextLine();
+		}
+		binsearch(arr,n);
+
+
+	}
+
+}

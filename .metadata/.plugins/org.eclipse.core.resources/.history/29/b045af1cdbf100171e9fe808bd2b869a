@@ -1,0 +1,12 @@
+import java.util.Random;
+
+public class Flip_coin {
+
+	public static void main(String[] args) {
+		Random ran=new Random();
+		double m=ran.nextDouble();
+		System.out.println(m);
+		
+	}
+
+}

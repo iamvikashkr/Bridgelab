@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Power_2 {
+
+	public static void main(String[] args) {
+
+		System.out.println("Enter the value of N");
+		Scanner scan=new Scanner(System.in);
+		int N=scan.nextInt();
+		int pow=1;
+		if(N>=0 && N<31)
+		{
+			for(int i=1;i<N;i++)
+			{
+				pow=pow*2;
+				System.out.println("Power value of "+i+": "+pow);
+			}
+		}
+	}
+
+}

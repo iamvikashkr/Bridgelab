@@ -1,0 +1,14 @@
+
+public class Distance {
+
+	public static void main(String[] args) {
+
+		System.out.println("Your first argument is: "+args[0]);  
+		System.out.println("Your Second argument is: "+args[1]);  
+
+		String x=args[0];
+		String y=args[1];
+		
+	}
+
+}
