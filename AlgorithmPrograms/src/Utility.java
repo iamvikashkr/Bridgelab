@@ -278,7 +278,90 @@ public class Utility {
 
 
 	}
+	public void anagram(String s2, String s1)
+	{
+		s1=s1.toLowerCase();
+		s2=s2.toLowerCase();
+
+		int flag=1;
+		if(s1.length()!=s2.length())
+		{
+			System.out.println("not a amagram");
+			System.exit(0);
+		}
+		char c1[]=s1.toCharArray();
+		Arrays.sort(c1);
+		char c2[]=s2.toCharArray();
+		Arrays.sort(c2);
+		for(int i=0;i<c1.length;i++)
+		{
+			if(c1[i]==c2[i])
+			{
+				flag=0;
+			}
+			else
+			{
+				flag=1;
+				break;
+			}
+		}
+		if(flag==0)
+		{
+			System.out.println("Strings are anagram");
+		}
+		else
+		{
+			System.out.println("Strings are not an anagram");
+		}
+	}
+
+	public int   palindrom(int n)
+	{
+		int rev=0,rem;
+		int num=n;
+		while(num>0)
+		{
+			rem=num%10;
+			rev=rev*10+rem;
+			num=num/10;
+		}
+		if(n==rev)
+		{
+			return rev;
+		}
+		else
+		{
+			return 0;
+		}
+	}
 
 
+	public int prim(int n)
+	{
+		int i ,flag =0;
+		for(i=2;i<n/2;i++)
+		{	//flag=0;
+			if(n%i==0)
+			{
+				flag=1;
+				break;
+			}
+		}	
+		if(flag==0)
+		{
+			return flag;
+		}
+		else
+		{
+			return flag;
+		}
+	}
+	public int dayofweek(int month, int day, int year) {
+
+
+		int t[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4}; 
+		year = (year -((month < 3)?1:0));
+		return (year + year/4 - year/100 + year/400 + t[month-1] + day ) % 7;
+	}
 
 }

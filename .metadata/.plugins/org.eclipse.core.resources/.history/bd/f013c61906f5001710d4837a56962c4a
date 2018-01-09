@@ -1,0 +1,34 @@
+
+public class Utility {
+	
+	int fact(int n)
+	{
+	    return (n==1)? 1 : n*fact(n-1);
+	}
+
+	public void permItr(String perm) {
+
+		int n=perm.length();
+		int fact=fact(n);
+		
+		int j=1;  // pointing to 2nd location
+		
+		int m=0;   //position to char to be fixed
+		
+		for(int i=0;i<fact;)
+		{
+			int k=0;
+			while(k!=fact/n)
+			{
+				while(j!=n-1)
+				{
+					swap(perm[j],perm[j-1]);
+					
+				}
+			}
+		}
+	}
+
+	
+	
+}

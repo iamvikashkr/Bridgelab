@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Permutation {
+
+	public static void main(String[] args) {
+
+		Scanner scan=new Scanner(System.in);
+		String perm=scan.next();
+		Utility ut=new Utility();
+		
+		ut.permItr(perm);
+		
+	}
+
+}

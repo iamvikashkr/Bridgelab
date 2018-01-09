@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Quadratic {
+
+	public static void main(String[] args) {
+
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the values of a, ,b, c");
+		long a=scan.nextLong();
+		long b=scan.nextLong();
+		long c=scan.nextLong();
+		
+		long delta=b*b-4*a*c;
+		
+		double root1=(-b + Math.sqrt(delta))/(2*a);
+		double root2=(-b - Math.sqrt(delta))/(2*a);
+		
+		System.out.println("Two roots are");
+		System.out.println("Root 1: "+root1);
+		System.out.println("Root 2: "+root2);
+		
+		
+
+		
+		
+	}
+
+}

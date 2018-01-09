@@ -1,0 +1,59 @@
+
+public class Utility {
+	
+	int fact(int n)
+	{
+	    return (n==1)? 1 : n*fact(n-1);
+	}
+
+	public void permItr(String perm) {
+
+		char ch[]=perm.toCharArray();
+		int n=perm.length();
+		int fact=fact(n);
+		
+		int j=1;  // pointing to 2nd location
+		
+		int m=0;   //position to char to be fixed
+		
+		for(int i=0;i<fact;)
+		{
+			char[] che=ch;
+			int k=0;
+			while(k!=fact/n)
+			{
+				while(j!=n-1)
+				{
+					char temp=che[j];
+					che[j]=che[j-1];
+					che[j-1]=temp;
+					
+					
+						System.out.print(che);
+					
+					System.out.println();
+					k++;
+					i++;
+					j++;
+				}
+				j=1;
+			}
+			m++;
+			if(m==n)
+			{
+				break;
+			}
+			
+			char temp=che[m];
+			che[m]=che[0];
+			che[0]=temp;
+			//System.out.print(che);
+			System.out.println();
+		}
+	}
+
+	
+
+	
+	
+}
